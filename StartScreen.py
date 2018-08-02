@@ -1,6 +1,6 @@
 #=========================== LIBRARYS =================================
 
-from tkinter import *
+import tkinter
 
 from ConsoleGame import Run
 from GUIGame import GetInputs
@@ -24,14 +24,14 @@ def Console():
 def OpenGUI():
     
     global root
-    root = Tk()
+    root = tkinter.Tk()
     root.geometry("600x300+350+100")
     root.title("Take-Away Game")
 
 #========================== CREATING WDGETS ============================
     
-    consoleGameButton = Button(text="Play Console Game", height='3', width='20', command=Console)
-    visualGameButton = Button(text="Play Visual Game", height='3', width='20', command=Visual)
+    consoleGameButton = tkinter.Button(text="Play Console Game", height='3', width='20', command=Console)
+    visualGameButton = tkinter.Button(text="Play Visual Game", height='3', width='20', command=Visual)
     visualGameButton.pack(side='right',expand=True)
     consoleGameButton.pack(side='left',expand=True)
     
